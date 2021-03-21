@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
- before_action :authenticate_user!, except: [:index, :show]
- before_action :set_article, only: [:show, :edit, :destroy, :update]
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :set_article, only: %i[show edit destroy update]
 
   def index
     @articles = Article.all
@@ -49,9 +49,9 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
- def set_article
-   @article = Article.find(params[:id])
- end
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
   private
 

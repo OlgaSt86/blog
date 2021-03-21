@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -15,26 +17,25 @@ gem 'webpacker', '~> 5.0'
 # gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
-gem 'pundit'
 gem 'likeable', '~> 0.1.2'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
+  gem 'letter_opener'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
-  gem 'letter_opener'
 end
 
 group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
