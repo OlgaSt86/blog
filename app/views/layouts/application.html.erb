@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%=csrf_meta_tags%>
+    <%=csp_meta_tag%>
+
+    <%=stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'%>
+    <%=javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'%>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="wrapper">
+        <nav class="header-nav">
+          <a href="#" class="logo">
+          <h1>NATURE</h1>
+          </a>
+          <ul class="nav-menu">
+            <li class="nav-list">
+              <a class="nav-link" href="<%=articles_path%>">ВСЕ СТАТЬИ</a>
+            </li>
+            <li class="nav-list">
+              <a class="nav-link" href="<%=new_article_path%>">НОВАЯ СТАТЬЯ</a>
+            </li>
+
+            <%if user_signed_in?%>
+                <li class="nav-list">
+                  <%= link_to "ВЫХОД", destroy_user_session_path, method: :delete, class: "nav-link"%>
+                </li>
+            <%else%>
+            <li class="nav-list">
+              <%= link_to "ВХОД", new_user_session_path, class: "nav-link"%>
+            </li>
+            <li class="nav-list">
+              <%= link_to "РЕГИСТРАЦИЯ", new_user_registration_path, class: "nav-link"%>
+            </li>
+             <%end%>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+     <article>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+     </article>
+
+     <article class="main">
+        <%=yield%>
+     </article>
+
+  </body>
+</html>

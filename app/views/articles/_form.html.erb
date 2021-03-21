@@ -1,0 +1,30 @@
+<%=form_with model: article, local: true do |form|%>
+    <div>
+      <%=form.label 'Название'%><br>
+      <%=form.text_field :title%>
+      <%if article.errors.present? %>
+        <%=article.errors.full_messages_for(:title).each do |message|%>
+          <div><%=message%></div>
+        <%end%>
+      <%end%>
+    </div>
+
+    <div>
+      <%=form.label 'Содержание'%><br>
+      <%=form.text_area :body%><br>
+      <%if @article.errors.present? %>
+        <%=article.errors.full_messages_for(:body).each do |message|%>
+          <div><%= message %></div>
+        <%end%>
+      <%end%>
+    </div>
+
+    <div>
+      <%=form.submit 'Сохранить'%>
+    </div>
+
+    <div>
+      <%=form.label 'Статус статьи'%><br>
+      <%=form.select :status, ['public', 'private', 'archived'], selected: 'public'%>
+    </div>
+<%end%>

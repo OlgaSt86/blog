@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: blog
+  pool: 5
+  host: localhost
+  port: 5432
+  user: olga
+  password: 123456
