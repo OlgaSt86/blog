@@ -3,13 +3,10 @@
 class CommentsController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
-    if @current_user
       @comment = @article.comments.create(comment_params)
       redirect_to article_path(@article)
-    else
-      flash[:error] = 'You are not authorized user!'
     end
-  end
+
 
   def destroy
     @article = Article.find(params[:article_id])
@@ -24,3 +21,14 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:commenter, :body, :status)
   end
 end
+
+
+# def create
+#   @article = Article.find(params[:article_id])
+#   if @current_user
+#     @comment = @article.comments.create(comment_params)
+#     redirect_to article_path(@article)
+#   else
+#     flash[:error] = 'You are not authorized user!'
+#   end
+# end

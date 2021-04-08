@@ -19,6 +19,7 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'likeable', '~> 0.1.2'
 gem 'pundit'
+gem 'redis', '~> 4.2', '>= 4.2.5'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
