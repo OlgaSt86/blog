@@ -18,25 +18,26 @@ gem 'webpacker', '~> 5.0'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'likeable', '~> 0.1.2'
-gem 'pundit'
+gem 'pundit', '~> 2.1.0'
 gem 'redis', '~> 4.2', '>= 4.2.5'
+gem 'rails_admin', '~> 2.1', '>= 2.1.1'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
-  gem 'letter_opener'
+  gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'spring'
+  gem 'spring', '~> 2.1.1'
   gem 'web-console', '>= 4.1.0'
 end
 
 group :test do
   gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'selenium-webdriver', '~> 3.142.7'
+  gem 'webdrivers', '~> 4.5.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
