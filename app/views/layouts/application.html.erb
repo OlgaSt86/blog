@@ -49,6 +49,13 @@
      </article>
 
      <article class="main">
+       <div>
+         <%flash.each do |name, message|%>
+         <div class= "alert alert-<%=name%>">
+           <%message%>
+         </div>
+             <%end%>
+       </div>
         <%=yield%>
      </article>
 

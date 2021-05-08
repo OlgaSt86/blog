@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    authorize @article
+    # authorize @article
 
     if @article.save
       redirect_to @article
@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    authorize @article
   end
 
   def update
@@ -36,9 +37,9 @@ class ArticlesController < ApplicationController
     authorize @article
 
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, success: 'Статья успешно обновлена'
     else
-      render :edit
+      render :edit, danger: 'Статья не обновлена'
     end
   end
 

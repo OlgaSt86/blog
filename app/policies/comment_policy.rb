@@ -7,13 +7,10 @@ class CommentPolicy < CommentsController
   end
 
   def destroy?
-    user.super_admin?
-    user.admin?
+    user.super_admin? || user.admin?
   end
 
   def create?
-    user.super_admin?
-    user.admin?
+    user.super_admin? || user.admin?
   end
-
 end
