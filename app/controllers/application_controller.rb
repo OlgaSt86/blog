@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Pundit
-  include Likeable
+
 
   rescue_from Pundit::NotAuthorizedError do |exception|
     policy = exception.policy

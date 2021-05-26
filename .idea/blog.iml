@@ -152,6 +152,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v6.1.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.1.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.1.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="acts_as_votable (v0.13.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.7.0, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v10.2.4.0, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.16, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
@@ -179,10 +180,8 @@
     <orderEntry type="library" scope="PROVIDED" name="kaminari-actionview (v1.2.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kaminari-activerecord (v1.2.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kaminari-core (v1.2.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="keytar (v1.5.3, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.5.0, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="letter_opener (v1.7.0, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="likeable (v0.1.2, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.4.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.9.0, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, RVM: ruby-3.0.0 [blog]) [gem]" level="application" />

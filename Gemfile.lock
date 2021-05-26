@@ -64,6 +64,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    acts_as_votable (0.13.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.2.4.0)
@@ -125,16 +126,10 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    keytar (1.5.3)
-      activesupport
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.7.0)
       launchy (~> 2.2)
-    likeable (0.1.2)
-      activesupport
-      keytar (>= 1.5.2)
-      redis
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -281,6 +276,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable (~> 0.13.1)
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.0.0.beta1)
   byebug
@@ -288,7 +284,6 @@ DEPENDENCIES
   devise (~> 4.7, >= 4.7.3)
   jbuilder (~> 2.7)
   letter_opener (~> 1.7.0)
-  likeable (~> 0.1.2)
   listen (~> 3.3)
   pg (~> 1.2, >= 1.2.1)
   puma (~> 5.0)

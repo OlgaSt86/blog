@@ -17,10 +17,11 @@ gem 'webpacker', '~> 5.0'
 # gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
-gem 'likeable', '~> 0.1.2'
 gem 'pundit', '~> 2.1.0'
 gem 'redis', '~> 4.2', '>= 4.2.5'
 gem 'rails_admin', '~> 2.1', '>= 2.1.1'
+gem 'acts_as_votable', '~> 0.13.1'
+
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

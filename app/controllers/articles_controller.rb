@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
+  respond_to :js, :html, :json
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit destroy update]
 
@@ -48,6 +49,15 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to root_path
+  end
+
+  def like
+    @article = Article.find(params[:id])
+    if params[:format] == 'like'
+      @article.liked_by current_user
+    elsif params[:format] == 'unlike'
+      @article.unliked_by current_user
+    end
   end
 
   def set_article
