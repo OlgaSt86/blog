@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   respond_to :js, :html, :json
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit destroy update]
+  # before_action :authenticate_user!, only: [:like]
 
   def index
     @articles = Article.all

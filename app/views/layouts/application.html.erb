@@ -10,7 +10,6 @@
     <%=javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'%>
   </head>
 
-  <span>
     <header class="main-header">
       <div class="wrapper">
         <nav class="header-nav">
@@ -48,27 +47,6 @@
         <p class="alert"><%= alert %></p>
      </article>
 
-    <span class="parent-likes">
-      <span class="like_count" <%=article.id%>'>
-      <%= article.get_likes.size %> &#128591
-      </span>
-
-    <a>
-      <% if current_user.liked? article %>
-      <div>
-        <%= link_to like_article_path(article, 'unlike'), class: "preached-btn",
-        method: :put, remote: :true do %> Preached
-      </div>
-        <%end%>
-        <%else%>
-      <div>
-        <%= link_to like_article_path(article, 'like'), class: "preach-btn",
-        method: :put, remote: :true do %> Preach
-      </div>
-        <%end%>
-      <%end%>
-        </a>
-  </span>
 
      <article class="main">
        <div>

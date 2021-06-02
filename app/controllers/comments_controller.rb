@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, only: %i[show]
   # def create
   #   @article = Article.find(params[:article_id])
   #     @comment = @article.comments.create(comment_params)
   #     redirect_to article_path(@article)
   #   end
+  def show
+    @comment = @article.comments.find(params[:id])
+  end
 
   def create
     @article = Article.find(params[:article_id])

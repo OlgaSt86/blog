@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
     member do
-      put "like" => "articles#like"
+      put 'like' => 'articles#like'
       end
     end
   end
