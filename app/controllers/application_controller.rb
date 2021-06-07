@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Pundit
-
+  add_flash_types :info, :error, :warning
 
   rescue_from Pundit::NotAuthorizedError do |exception|
     policy = exception.policy

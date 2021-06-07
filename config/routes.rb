@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  authenticate :user, lambda { |u| u.roles == "admin" } do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  end
   devise_for :users
   root 'articles#index'
   resources :articles do
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
 
 
   # get "/articles", to: "articles#index"

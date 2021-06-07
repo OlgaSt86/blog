@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
       @comment = @article.comments.create(comment_params)
       redirect_to article_path(@article)
     else
-      flash[:error] = 'You are not authorized user!'
+      flash[:alert] = 'You are not authorized user!'
     end
   end
 
@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to article_path(@article)
     else
-      flash[:error] = 'You are not authorized user!'
+      flash[:alert] = 'You are not authorized user!'
     end
   end
 
